@@ -12,7 +12,7 @@ data "alicloud_instance_types" "default" {
 data "alicloud_cs_cluster_credential" "auth" {
   cluster_id                 = alicloud_cs_managed_kubernetes.default.id
   temporary_duration_minutes = 60
-  output_file                = "./aks_cfg"
+  output_file                = "./kube_cfg"
 }
 
 resource "alicloud_vpc" "default" {
